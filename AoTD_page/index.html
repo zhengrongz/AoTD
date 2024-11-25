@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Unlocking VideoLLM via Agent-of-Thoughts Distillation</title>
+  <link rel="icon" type="image/x-icon" href="./static/images/bot.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Unlocking VideoLLM via Agent-of-Thoughts Distillation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Yudi Shi</a><sup>1</sup>, </span>
+                <span class="author-block">
+                  <a href="https://dszdsz.cn/" target="_blank">Shangzhe Di</a><sup>1</sup>, </span>
+                <span class="author-block">
+                Qirui Chen<sup>1</sup>, </span>
+                <a href="https://weidixie.github.io" target="_blank">Weidi Xie</a><sup>1</sup></span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University, China</span>&nbsp;&nbsp;&nbsp;
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://github.com/zhengrongz/AoTD" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/zhengrongz/AoTD" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://github.com/zhengrongz/AoTD" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="vertical-image-display">
+        <!-- <div class="columns is-centered has-text-centered"><h2 class="title"></h2></div> -->
+        <div class="image-item">
+          <img src="./static/images/teaser.png" alt="Teaser"/>
+          <h2 class="subtitle">
+          <figcaption>
+            Our method, <strong>AoTD</strong>, distills multi-step reasoning and spatial-temporal understanding into a single generative video-language model. 
+            When addressing complex VideoQA tasks, the model trained with AoTD (as shown in (b)) enables to generate a step-by-step reasoning to get the correct answer. In contrast, previous models trained solely on question-answer pairs (as in (a)) generate only a final answer, often without intermediate reasoning, which can lead to incorrect conclusions.
+          </figcaption>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero ">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This paper tackles the problem of video question answering (VideoQA), 
+            a task that often requires multi-step reasoning and a profound understanding of spatial-temporal dynamics. While large video-language models perform well on benchmarks, they often lack explainability and spatial-temporal grounding. 
+            In this paper, we propose <strong>A</strong>gent-<strong>o</strong>f-<strong>T</strong>houghts <strong>D</strong>istillation (<strong>AoTD</strong>), a method that enhances models by incorporating automatically generated Chain-of-Thoughts (CoTs) into the instruction-tuning process. Specifically, we leverage an agent-based system to decompose complex questions into sub-tasks, and address them with specialized vision models, the intermediate results are then treated as reasoning chains. 
+            We also introduce a verification mechanism using a large language model (LLM) to ensure the reliability of generated CoTs. Extensive experiments demonstrate that AoTD improves the performance on multiple-choice and open-ended benchmarks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Vertical Image Display -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="vertical-image-display">
+        <div class="columns is-centered has-text-centered"><h2 class="title is-3">Method</h2></div>
+        <div class="image-item">
+          <img src="./static/images/method.png" alt="Overall Structure"/>
+          <h2 class="subtitle">
+            <figcaption>
+              <strong>Overview on Agent-of-Thoughts Distillation (AoTD).</strong> <strong>Step 1:</strong> Selecting best-performing agents for each sub-task to construct an agent-based system. <strong>Step 2:</strong> Decomposing question into executable program and leveraging chosen models to solve it sequentially to generate execution trace. <strong>Step 3:</strong> The execution trace is converted and filtered by LLM to produce high quality natural language CoTs. <strong>Step 4:</strong> Distilling CoTs into Video-LLM with two forms of prompt, allowing it achieve a balance between concise answers and comprehensive rationales. The final model is Video-LLM-AoTD.
+          </figcaption>
+          </h2>
+        </div>
+        <div class="columns is-centered has-text-centered"><h2 class="title is-3">Results</h2></div>
+        <div class="image-item">
+          <img src="./static/images/result1.png" alt="MCVQA Results"/>
+          <h2 class="subtitle">
+            <figcaption>
+              <strong>Comparison with Video-LLMs on MC-VQA benchmarks.</strong> LLaVA-NeXT-Video-AoTD improves performance in all open-ended benchmarks compared with the Instruct version. * means results reproduced by ourseleves.
+          </figcaption>
+          </h2>
+        </div>
+        <div class="image-item">
+          <img src="./static/images/result2.png" alt="OEVQA Results"/>
+          <h2 class="subtitle">
+            <figcaption>
+              <strong>Comparison with Video-LLMs on OE-VQA benchmarks.</strong> LLaVA-NeXT-Video-AoTD improves performance in all open-ended benchmarks compared with the Instruct version. * means results reproduced by ourseleves.
+          </figcaption>
+          </h2>
+        </div>
+        <div class="columns is-centered has-text-centered"><h2 class="title is-3">Qualitative Results</h2></div>
+        <div class="image-item">
+          <img src="./static/images/Qualitative.png" alt="VQA Results"/>
+          <h2 class="subtitle">
+            <figcaption>
+              <strong>Visualization of rationales.</strong> LLaVA-NeXT-Video-AoTD can output rationales containing both spatial-temporal grounding of key information and step-by-step thinking process to solve the question.
+          </figcaption>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Vertical Image Display -->
+
+<style>
+  .subtitle {
+    width: 70%;
+    display: block;
+    margin-left: calc(50% - 35%);
+  }
+  .vertical-image-display .image-item {
+    margin-bottom: 50px; /* Space between items */
+  }
+  .vertical-image-display img {
+    width: 70%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    /* Centering image */
+    display: block;
+    margin-left: calc(50% - 35%);
+  }
+  figcaption {
+    font-size: 14px; 
+    line-height: 1.5;
+  }
+  .hero.is-small {
+      margin-bottom: -5rem; 
+      padding-bottom: 0;
+    }
+</style>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{liu2023zeroshot,
+        title={Zero-shot Composed Text-Image Retrieval}, 
+        author={Yikun Liu and Jiangchao Yao and Ya Zhang and Yanfeng Wang and Weidi Xie},
+        year={2023},
+        journal={arXiv preprint arXiv:2306.07272},
+  }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
