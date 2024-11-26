@@ -1,7 +1,7 @@
 # AoTD
 Official PyTorch code of "Unlocking Video-LLM via Agent-of-Thoughts Distillation", Arxiv.
 
-[[Project page]](https://dszdsz.cn/GroundVQA/index.html) [[Paper]](https://arxiv.org/abs/2312.06505)
+[[Project page]](https://zhengrongz.github.io/AoTD/)) [[Paper]](https://arxiv.org/abs/2312.06505)
 
 ## Abstract
 
