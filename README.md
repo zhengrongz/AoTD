@@ -11,5 +11,4 @@ Code will be released soon!
 If you find this paper useful, please consider staring this repo and citing our paper!
 ```latex
 ...
-}
 ```
