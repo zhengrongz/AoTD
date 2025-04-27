@@ -1,0 +1,47 @@
+load_models: # Which pretrained models to load
+    llava: True
+    deepseek: True
+    owlv2: True
+    llama: True
+    univtg: True
+    llavanext: False
+
+detect_thresholds:                                  # Thresholds for the models that perform detection
+    owlv2: 0.5
+ratio_box_area_to_image_area: 0.0                   # Any detected patch under this size will not be returned
+crop_larger_margin: True    
+
+select_answer_prompt_dir: prompts/select_answer.prompt
+
+
+univtg:
+  resume: pretrained_models/UniVTG/model_best.ckpt
+  save_dir: UniVTG/tmp
+
+llava:
+  model_path: null
+  action_prompt_path: prompts/action_single.prompt
+
+owlv2:
+  model_path: null
+
+deepseek:
+  model_path: null
+  prompt_path: prompts/star_video.prompt
+
+llavanext:
+  model_path: null
+
+llama:
+  model_path: null      
+
+
+cot:
+  dataset_name: STAR
+  dataset_dir: your_path/STAR_train.json
+  video_dir: your_path/star_video
+  save_cot_dir: cot/STAR.txt
+
+
+
+

@@ -1,0 +1,27 @@
+We want to answer a question about a video. We have information about the video. We also have a question, and a list of options. We want to return the option's letter that is most likely to be the correct answer to the question.
+
+Here are some examples you should read:
+- Question: what does the man in checkered do after walking onto the stage with microphone stands at the start
+- Caption of frame after walking onto the stage: a man and woman in a kimono is shown
+Take a close look at the question and information provided and select one of the possible answers
+Just select one of the answers, don't add other words!!
+- Possible answers: 
+(A) take away the stand 
+(B) set up the stand
+(C) takes out some paper
+(D) bow to people
+(E) hands him a bottle
+- Selected answer: B
+
+Now, here is the question, information and possible answers.
+- Question: {question}
+{info}
+Take a close look at the question and information provided and select one of the possible answers.
+Answer with the option\'s letter from the given choices directly and only give the best option.
+Do not need to answer any other words.
+- Possible answers:
+{possible_answers}
+- Selected answer:
+
+
+

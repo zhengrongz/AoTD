@@ -1,0 +1,7 @@
+I will give you a question and a rationale to solve the question, you need to judge:
+1. whether the rationale is thinking step by step.
+2. whether the rationale is helpful to solve the question.
+If yes, return True, If not, return False. no need to explain.
+Here is the question and rationale:
+INSERT_QUESTION_HERE.
+Rationale: INSERT_RATIONALE_HERE

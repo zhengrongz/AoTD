@@ -1,0 +1,197 @@
+def Query_Objs(clip, query):
+    """
+    Query the objects that appear in video clip and match the query descriptions.
+    Parameters
+    -------
+    clip:
+        a list of video frames.
+    query:
+        Description of the target object.
+    Returns
+    -------
+    a list of bounding boxes of the objects that match the query.
+    Examples
+    -------
+    #return white_objs
+    def execute_command(video_clip):
+        white_objs = Query_Objs(video_clip, "white object")
+        return white_objs
+    """
+
+def Query_Actions(clip, obj=None):
+    """
+    Find the actions happened in the video clip, if obj is not None, query the actions related to it.
+    Parameters
+    -------
+    clip:
+        a list of the video frames.
+    obj:
+        object class which is used to query the actions related to it.
+    Returns
+    -------
+    a list of actions classes happened in the video clip.
+    Examples
+    -------
+    #return actions
+    def execute_command(video_clip, query, possible_answers):
+        actions = Query_Actions(video_clip)
+        return actions
+    """
+
+def Filter_frames_with_act(clip, action):
+    """
+    filter a new video clip containing the time period in which the target action occurred
+    Parameters
+    -------
+    clip:
+        a list of video frames.
+    action:
+        the target action which is used to filter frames.
+    Returns
+    -------
+    a new video clip ontaining the time period in which the target action occurred.
+    Examples
+    -------
+    #return jump_clip
+    def execute_command(video_clip, query, possible_answers):
+        jump_clip = Filter_frames_with_act(video_clip, "person is jumping")
+        return jump_clip
+    """
+
+def Filter_frames_with_obj(clip, obj):
+    """
+    filter a new video clip that the target object occured.
+    Parameters
+    -------
+    clip:
+        a list of video frames.
+    obj:
+        class or description about the target object.
+    Returns
+    -------
+    a new video clip that the target object occured in it.
+    Examples
+    -------
+    #return shoe_clip
+    def execute_command(video_clip, query, possible_answers):
+        shoe_clip = Filter_frames_with_obj(video_clip, "shoe")
+        return shoe_clip
+    """
+
+def trim(clip, start=None, end=None):
+    """
+    Returns a new video clip containing a trimmed version of the original video at the [start, end] clip.
+    Parameters
+    ----------
+    clip:
+        a list of video frames.
+    start : Union[int, None]
+        An int describing the starting frame in this video clip with respect to the original video.
+    end : Union[int, None]
+        An int describing the ending frame in this video clip with respect to the original video.
+    
+    Returns
+    -------
+    a new video clip with start and end.
+    """
+def Find(clip, obj):
+    """
+    find all bounding boxes around a certain object in the video clip,
+    and collates them into a collection of frames.
+    Parameters
+    ----------
+    clip:
+        a list of video frames.
+    obj:
+        the object to look for.
+    Returns
+    -------
+    a new video clip composed of crops of the object.
+    Examples
+    --------
+    # Return the shoe_clip
+    def execute_command(video_clip, query, possible_answers):
+        shoe_clip = Find(video_clip, "shoe")
+        return shoe_clip
+    """
+
+def select_answer(query, info, possible_answers):
+    """
+    Uses a language model to choose the option that best answers the question given the input information.
+    Parameters
+    ----------
+    query:
+        the input question.
+    info:
+        Any useful information to answer the question.
+    possible_answers:
+        a list of possible answers to the question.
+    Returns
+    -------
+    one answer chosen from the possible answers.
+    Examples
+    --------
+    # Return the answer
+    def execute_command(video_clip, query, possible_answers):
+        clip_summary = Video_summary(video_clip)
+        info = {
+            "summary of the target video": clip_summary
+        }
+        answer = select_answer(query, info, possible_answers)
+        return answer
+    """
+def exist(clip, query):
+    """
+    judge whether a object exists in the video.
+    Parameters
+    ----------
+    clip:
+        a list of video frames.
+    query:
+        query to the object class.
+    Returns
+    -------
+    Return True if the object specified by query is found in the video, and False otherwise.
+    Examples
+    --------
+    # Return the flag
+    def execute_command(video_clip, query, possible_answers):
+        flag = exist(video_clip, "shoe")
+        return flag
+    """
+def Video_summary(clip, query):
+    """
+    give a brief summary of the video clip related to the query.
+    Parameters
+    ----------
+    clip:
+        a list of video frames.
+    query:
+        a question about the video.
+    Returns
+    -------
+    return a brief summary of the video clip.
+    Examples
+    --------
+    # Return the clip_summary
+    def execute_command(video_clip, query, possible_answers):
+        clip_summary = Video_summary(video_clip, query)
+        return clip_summary
+    """
+Write a function using Python and the functions (above) that could be executed to provide an answer to the query. 
+
+Consider the following guidelines:
+- Use base Python (comparison, sorting) for basic logical operations, start/end, math, etc.
+- Objects with mutiple names like "phone/camera", "cup/glass/bottle" with slash, input them as a whole object name!!
+- Just use the class and function appear above except for some base python operations.
+- Only answer with a function starting def execute_command, don't answer any extra words and symbols before and after the function!!!!
+- No text that is not related to function can appear!!
+- the answer only begins with "def execute_command" and ends with "return answer"!!!!!!
+- Do not use extra unnecessary indentation!!
+
+Here are some examples of the function you should write:
+-----
+[Add your examples here.]
+------
+Query: INSERT_QUERY_HERE
+possible answers: INSERT_POSSIBLE_ANSWERS_HERE

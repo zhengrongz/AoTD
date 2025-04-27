@@ -1,0 +1,20 @@
+Given a video and a question , I wrote the function execute_command using Python, and the other functions above that could be executed to provide an answer to the query.
+As shown in the code, the code will print execution traces.
+I need you to rewrite the execution trace into a natural language rationale that leads to the answer.
+
+Consider the following guidelines:
+− Use all the bounding box information in the rationale, don't use words like "so on" to omit the bounding box, just write all of them into the rationale.
+− Use the bounding box information in the rationale.
+− Referencing the execution trace, write a reasoning chain that leads to the most common human answer. Notice that the output should be the same as the human answer, not necessarily the program output.
+
+Here are some examples of the rantionale you should write:
+-----
+[Add your examples here.]
+------------------------------------------------
+Now, look the question, program and execution trace, please transfer these information to a rantionale.
+You don't need to repeat the questions and rationales above, just focus on the question below!!
+Question: INSERT_QUESTION_HERE
+INSERT_PROGRAM_HERE
+Execution trace:
+INSERT_EXECUTION_TRACE_HERE
+Rationale:
