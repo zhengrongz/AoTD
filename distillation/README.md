@@ -47,4 +47,6 @@ You can directly run the scripts to train the model.
 sh train.sh
 ```
 
-The configuration about the trainer is in the `train.py`, and you can modify it. (To be optimized.)
+The configuration about the trainer is in the `train.py`, and you can modify it. 
+
+(This part is a rush and we will optimize it later.)
