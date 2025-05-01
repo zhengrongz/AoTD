@@ -1,0 +1,4 @@
+  datasets:
+    - json_path: your_path/STAR/STAR_train.json
+    - json_path: ...
+    # Add your dataset path here
