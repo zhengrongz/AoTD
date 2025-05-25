@@ -1,16 +1,15 @@
 # AoTD
 Official PyTorch code of "Enhancing Video-LLM Reasoning via Agent-of-Thoughts Distillation", CVPR 2025.
 
-[[Project page]](https://zhengrongz.github.io/AoTD/) [[Paper]](https://arxiv.org/abs/2412.01694)
+[[Project page]](https://zhengrongz.github.io/AoTD/) [[Paper]](https://arxiv.org/abs/2412.01694) [[Model]](https://huggingface.co/Zhengrongzz/AoTD-7B)
 
 
 ## 🔥News
+* **[2025.5.21]** Release the AoTD-7B checkpoint, distillation and evaluation code!
 * **[2025.4.27]** AoTD got accepted by CVPR 2025!
 * **[2025.4.27]** We change the original title to "Enhancing Video-LLM Reasoning via Agent-of-Thoughts Distillation".
 * **[2025.4.27]** We release the code about Agent system, CoT transfer and filtering.
 
-## TODOs
-* Code about distillation and evaluation. (After NIPs deadline)
 
 ## Installation
 ```
@@ -44,6 +43,14 @@ python cot_filter.py
 Noted that the configs about `cot_construction.py` are in base_config.yaml, but configs about the other two files are in files themselves.
 
 After running the code, you can get the filtered CoT data and use it in the training process.
+
+## Distillation
+Please see `distillation/` for details.
+
+## Evaluation
+Please see `evaluation/`.
+
+You can modify and run the scripts in `evaluation/scripts` for model evaluation.
 
 ## Citation
 If you find this paper useful, please consider staring this repo and citing our paper!

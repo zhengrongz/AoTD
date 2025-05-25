@@ -11,11 +11,10 @@ import yaml
 
 
 
-MAX_LENGTH = 1024
+MAX_LENGTH = 8192
 BATCH_SIZE = 4
-NUM_FRAMES = 32 # more frames -> more VRAM needed
 OUTPUT_DIR = "./outputs" # path where to save the checkpoints
-MODEL_ID = "your_path/LLaVA-NeXT-Video-7B"
+MODEL_ID = "your_path/LLaVA-NeXT-Video-7B-hf"
 REPO_ID = "AoTD_train" # Change to your hf-hub repo
 DATA_PATH = "datasets/train_datasets.yaml"
 
@@ -39,6 +38,7 @@ class LlavaNextVideoDataCollatorWithPadding:
             conversation = self.processor.apply_chat_template(conversation, add_generation_prompt=False)
 
             video = get_video(feature['video_path'])
+            # import ipdb; ipdb.set_trace()
             batch = self.processor(
                 text=conversation,
                 videos=video,
@@ -96,7 +96,7 @@ def parse_args():
         eval_steps=20,
         per_device_train_batch_size = BATCH_SIZE,
         per_device_eval_batch_size = BATCH_SIZE,
-        gradient_accumulation_steps = 3,
+        gradient_accumulation_steps = 1,
         learning_rate = 4e-05,
         num_train_epochs=1, # adjust this depending on your dataset size
         lr_scheduler_type = 'cosine',
@@ -113,7 +113,7 @@ def parse_args():
         tf32=True,
         fp16_full_eval = True,
         optim = 'adamw_bnb_8bit', # adam in lower-bits to save memory, consider changing to 'adamw_torch' if model is not converging
-        report_to = "wandb", # install wand to use this
+        report_to = "none", # install wand to use this
         hub_model_id = REPO_ID,
         push_to_hub = False, # wel'll push the model to hub after each epoch
         label_names=["labels"],

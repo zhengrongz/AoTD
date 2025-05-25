@@ -1,9 +1,11 @@
 git+https://github.com/huggingface/accelerate
 backoff==2.2.1
-bitsandbytes==0.38.1
+bitsandbytes
 cityscapesscripts==2.2.1
 git+https://github.com/openai/CLIP.git
+datasets
 decord==0.6.0
+deepspeed
 dill==0.3.6
 einops==0.6.0
 ffmpeg=python==0.2.0
