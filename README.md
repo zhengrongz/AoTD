@@ -5,7 +5,7 @@ Official PyTorch code of "Enhancing Video-LLM Reasoning via Agent-of-Thoughts Di
 
 
 ## 🔥News
-* **[2025.5.21]** Release the AoTD-7B checkpoint, distillation and evaluation code!
+* **[2025.5.25]** Release the AoTD-7B checkpoint, distillation and evaluation code!
 * **[2025.4.27]** AoTD got accepted by CVPR 2025!
 * **[2025.4.27]** We change the original title to "Enhancing Video-LLM Reasoning via Agent-of-Thoughts Distillation".
 * **[2025.4.27]** We release the code about Agent system, CoT transfer and filtering.
