@@ -27,7 +27,6 @@ git+https://github.com/openai/openai-python.git
 opencv_python==4.11.0.86
 opencv_python_headless==4.11.0.86
 pandas==1.5.2
-Pillow==9.4.0
 prettytable==3.6.0
 pycocotools==2.0.6
 python_dateutil==2.8.2
